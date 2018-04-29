@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+ <html>
+    <head>
+        <title>registeration</title>
+         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+       
+    </head>
+    <body>
+        <div>
+        <form method ="post"  th:action="@{/register}" th:object="${user}">
+            Name <input type="text"  th:field="*{name}" id="name" />
+            <br><br>
+            user_type <input type="text" th:field="*{type}"  />
+            <br><br>
+            Email <input type="text" th:field="*{email}"  />
+            <br><br>
+            gender <input type="text" th:field="*{gender}"  />
+            <br><br>
+            country <input type="text" th:field="*{country}"  />
+            <br><br>
+            phone <input type="text" th:field="*{phone}"  />
+            <br><br>
+            Credit Card <input type="text" th:field="*{creditCard}"  />
+            <br><br>
+            username <input type="text" th:field="*{username}"  />
+            <br><br>
+            password <input type="password" th:field="*{password}"  />
+            <br><br>
+            <input type="submit" value="submit">
+        </form>
+        <br><br>
+         <a href="http://localhost:8088/login" th:action="@{/login}" th:object="${user}"><button>login now</button></a>
+        </div>
+    </body>
+</html>

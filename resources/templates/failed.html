@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+       <title>failed</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <style >
+        
+        
+            body{
+                background-color:skyblue;
+            }
+            .myform{
+                text-align: center;
+                margin-top: 50px;
+                background-color:gainsboro;
+                width: 300px;
+                margin-left: 550px;
+                height: 500px;
+            }
+        
+                h3{
+                    font-family:sans-serif;
+                    font-size: 30px;
+                    
+                }
+        
+        </style>
+        
+        
+    </head>
+    <body>
+        <div class="myform">
+            <br><br><br><br><br><br><br>
+        <div th:action="@{/failed}" th:object="${user}" ><h3>failed</h3></div>
+           <br>
+        <br>
+             <br>
+             <a href="http://localhost:8088/login" th:action="@{/login}" th:object="${user}">
+                 
+        <button style="width: 90px; height: 60px;">Go To Login</button></a>
+            
+        <br><br>
+            <a href="http://localhost:8088/register" th:action="@{/register}" th:object="${user}"><button style="width: 150px; height: 60px;">create new account</button></a>
+        </div>
+    </body>
+</html>

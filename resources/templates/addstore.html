@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+ <html>
+    <head>
+        <title>addstore</title>
+         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+           <style >
+        
+        
+            body{
+                background-color:skyblue;
+            }
+            .myform{
+                text-align: center;
+                margin-top: 50px;
+                background-color:gainsboro;
+                width: 300px;
+                margin-left: 550px;
+                height: 500px;
+            }
+            #name{
+                margin-top: 100px;
+            }
+        
+        
+        
+        </style>
+        
+        
+    </head>
+    <body>
+        <div class="myform">
+       <form method ="post"  action ="# " th:action="@{/addstore}" th:object="${store}" >
+            Store Name <input type="text" id="name" th:field="*{store_name}"/> 
+               <br> <br>
+            Store ID <input type="number" th:field="*{store_id}" />
+            <br><br>
+            Store Type<input type="text" th:field="*{store_type}"/>
+            <br><br>
+            Store location <input type="text" th:field="*{store_location}" />
+            <br><br>
+            <input type="submit" value="submit"/>
+        </form>
+             <br>
+        <br> 
+        
+        <a href="http://localhost:8088/login" th:action="@{/login}" th:object="${user}"><button>logout</button></a>
+        </div>
+    </body>
+</html>
